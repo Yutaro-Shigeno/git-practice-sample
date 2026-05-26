@@ -53,11 +53,12 @@ class TaskManager:
 
 def main():
     manager = TaskManager()
+    print("Task Manager Practice")
 
     task1 = Task(1, "Create GitHub repository", "Alice", "High")
     task2 = Task(2, "Clone repository to local PC", "Bob", "Medium")
-    task3 = Task(3, "Practice branch merge", "Charlie", "Low")
-
+    task3 = Task(3, "Practice merge conflict on main branch", "Charlie", "High")
+    
     manager.add_task(task1)
     manager.add_task(task2)
     manager.add_task(task3)
@@ -65,6 +66,7 @@ def main():
     task1.start()
     task2.complete()
 
+    print("Main branch exclusive message")
     print("All tasks:")
     manager.show_all_tasks()
 
